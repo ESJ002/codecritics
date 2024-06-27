@@ -1,20 +1,27 @@
-export default function Response({ handleSave, handlePlay, handlePause, handleStop, currentCode, isLoading, response}) {
+export default function Response({ handleSave, handlePlay, handlePause, handleStop, currentCode, isLoading, response, character, isPaused}) {
+
+
+
+
 
 
     return (
         <section>
-            <p>Your code = {currentCode}</p>
             {isLoading ? (
-                <p>Loading review...</p>
+                <div className="response">
+                <p className={`${character}-text`}>Loading review...</p>
+                </div>
             ) : (
                 <div className="response">
-                    <p>{response}</p>
+                    { response === '' ? <></> :
+                    <p className={`${character}-text`}>{response}</p>
+}
                     {response !== "" ? (
-                        <div className="buttons">
-                            <button onClick={handleSave}>SAVE</button>
-                            <button onClick={handlePlay}>PLAY</button>
-                            <button onClick={handlePause}>PAUSE</button>
-                            <button onClick={handleStop}>STOP</button>
+                        <div className={character}>
+                            <button className={character} onClick={handleSave}>SAVE</button>
+                            {isPaused ? <button  className={character} onClick={handlePlay}>PLAY</button> : <button className={character} onClick={handlePause}>PAUSE</button>}
+                            
+                            <button className={character} onClick={handleStop}>STOP</button>
                         </div>
                     ) : (
                         <></>

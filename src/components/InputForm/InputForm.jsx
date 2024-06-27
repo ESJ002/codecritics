@@ -5,13 +5,14 @@ export default function InputForm({
     handleSubmit,
     handleChange,
     changeVoice,
-    formData
+    formData,
+    character
 }) {
     return (
         <form onSubmit={handleSubmit} className="new-note-form">
-            <TextArea handleChange={handleChange} formData={formData}/>
-            <DropDownSelect changeVoice={changeVoice}/>
-            <button>SUBMIT</button>
+            <TextArea handleChange={handleChange} formData={formData} character={character}/>
+            <DropDownSelect changeVoice={changeVoice} character={character}/>
+            {formData !== '' ? <button className={character}>SUBMIT</button> : <></>}
         </form>
     );
 }
