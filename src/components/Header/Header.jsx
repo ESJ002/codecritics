@@ -1,10 +1,13 @@
 export default function Header({
-    character
+    colour,
+    onLogout,
+    setCurrentPage
 }) {
     return (
-        <header className={character}>
-            <button className={`${character} header`}>MEET THE BOTS</button>
-            <button className={`${character} header`}>YOUR REVIEWS</button>
+        <header className={colour}>
+             <button className={`${colour} header`} onClick={setCurrentPage('home')}>HOME</button>
+            <button className={`${colour} header`} onClick={setCurrentPage('reviews')}>YOUR REVIEWS</button>
+            <button className={`${colour} header`} onClick={onLogout}>LOGOUT</button>
         </header>
     );
 }

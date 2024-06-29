@@ -1,4 +1,4 @@
-export default function Response({ handleSave, handlePlay, handlePause, handleStop, currentCode, isLoading, response, character, isPaused}) {
+export default function Response({ handleSave, handlePlay, handlePause, handleStop, currentCode, isLoading, response, character, isPaused, colour}) {
 
 
 
@@ -9,19 +9,19 @@ export default function Response({ handleSave, handlePlay, handlePause, handleSt
         <section>
             {isLoading ? (
                 <div className="response">
-                <p className={`${character}-text`}>Loading review...</p>
+                <p className={`${colour}-text`}>Loading review...</p>
                 </div>
             ) : (
                 <div className="response">
                     { response === '' ? <></> :
-                    <p className={`${character}-text`}>{response}</p>
+                    <p className={`${colour}-text`}>{response}</p>
 }
                     {response !== "" ? (
-                        <div className={character}>
-                            <button className={character} onClick={handleSave}>SAVE</button>
-                            {isPaused ? <button  className={character} onClick={handlePlay}>PLAY</button> : <button className={character} onClick={handlePause}>PAUSE</button>}
+                        <div className={colour}>
+                            <button className={colour} onClick={handleSave}>SAVE</button>
+                            {isPaused ? <button  className={colour} onClick={handlePlay}>PLAY</button> : <button className={colour} onClick={handlePause}>PAUSE</button>}
                             
-                            <button className={character} onClick={handleStop}>STOP</button>
+                            <button className={colour} onClick={handleStop}>STOP</button>
                         </div>
                     ) : (
                         <></>
