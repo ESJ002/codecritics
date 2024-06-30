@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as AuthApi from "../../utils/auth_api.js";
-export default function Login({ onLogin }) {
+export default function Login({ onLogin, colour }) {
     const [formData, setFormData] = useState({ email: "", password: "" });
     let incorrectMessage = ""
     async function handleSubmit(e) {
@@ -20,12 +20,12 @@ export default function Login({ onLogin }) {
     }
 
     return (
-        <section className="login">
+        <section className={`${colour} login`}>
             <h1>LOG IN</h1>
             <form onSubmit={handleSubmit}>
-                <label>EMAIL</label>
+                <label className={colour}>EMAIL</label>
                 <br />
-                <input name="email" type="text" onChange={handleChange} />
+                <input name="email" type="text" onChange={handleChange} className={colour}/>
                 <br />
                 <label>PASSWORD</label>
                 <br />
@@ -33,10 +33,11 @@ export default function Login({ onLogin }) {
                     name="password"
                     type="password"
                     onChange={handleChange}
+                    className={colour}
                 />
                 <br />
 
-                <button>LOG IN</button>
+                <button className={colour}>LOG IN</button>
             </form>
             <p>{incorrectMessage}</p>
         </section>

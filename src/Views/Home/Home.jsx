@@ -4,9 +4,9 @@ import InputForm from "../../components/InputForm/InputForm";
 import Response from "../../components/Response/Response";
 import Header from "../../components/Header/Header";
 import { getUserFromLocalStorage } from "../../utils/auth_service";
-import * as ReviewApi from "../../utils/review_api"
+import * as ReviewApi from "../../utils/review_api";
 
-function Home({ onLogout, user, setCurrentPage, colour, setColour}) {
+function Home({ user, colour, setColour }) {
     const voices = window.speechSynthesis.getVoices();
 
     const characterVoices = {
@@ -107,13 +107,13 @@ function Home({ onLogout, user, setCurrentPage, colour, setColour}) {
         setIsPaused(false);
     }
 
-    function handlePause(utterance) {
+    function handlePause() {
         const synth = window.speechSynthesis;
         synth.pause();
         setIsPaused(true);
     }
 
-    function handleStop(utterance) {
+    function handleStop() {
         const synth = window.speechSynthesis;
         synth.cancel();
         setIsPaused(true);
@@ -124,25 +124,30 @@ function Home({ onLogout, user, setCurrentPage, colour, setColour}) {
         const synth = window.speechSynthesis;
         synth.cancel();
         setIsPaused(true);
+
         setIsLoading(true);
+
         setVoiceReady(false);
+
         setCurrentCode(formData);
+
         const aiResponse = await getAiResponse(formData, character);
+
         setResponse(aiResponse);
+        console.log(aiResponse);
         setIsLoading(false);
     }
 
-    async function handleSave(e){
-
+    async function handleSave(e) {
         let review = {
             code: currentCode,
             review: response,
             critic: character,
             colour: colour,
             user: user.id,
-            date: Date().toString().substring(4,15)
-        }
-        let newReview = await ReviewApi.addOne(review)
+            date: Date().toString().substring(4, 15),
+        };
+        let newReview = await ReviewApi.addOne(review);
         console.log(newReview.review);
     }
 
@@ -150,14 +155,9 @@ function Home({ onLogout, user, setCurrentPage, colour, setColour}) {
         setCharacter(value);
     }
 
-
-
     return (
         <div className={`page-container ${colour}`}>
-            <h1>{user.id}</h1>
-            <Header colour={colour} onLogout={onLogout} setCurrentPage={setCurrentPage}/>
             <div className="input-container">
-                
                 <div className="character">
                     <img
                         src={`src/assets/Eyes/${eyes[character]}.png`}

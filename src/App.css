@@ -28,6 +28,52 @@ textarea {
     color: black;
 }
 
+.review {
+    border: 2px solid black;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.botname {
+    text-transform: uppercase;
+}
+
+.login {
+    color: lime;
+    align-items: center;
+    text-align: center;
+    
+  }
+  
+  .login input {
+
+    min-width: 500px;
+    min-height: 30px;
+border: 2px solid;
+    margin: 10px;
+
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .login label {
+    font-size: 20px;
+    font-family: "Noto Sans Cham";
+    font-weight: bold;
+  }
+  
+  .login button {
+    width: 500px;
+    height: 50px;
+    margin-top: 10px;
+    transition: color 0.3s, background-color 0.3s
+  }
+  
+  .login button:hover {
+    color: rgb(0, 43, 0);
+    transition: color 0.3s, background-color 0.3s
+  }
+
 .green {
     background-color: rgb(0, 43, 0);
     color: lime;
@@ -77,71 +123,78 @@ select {
     margin-top: 2px;
 }
 
-.green button:hover {
+.green-button:hover {
     background-color: lime;
     color: rgb(0, 43, 0);
     cursor: pointer;
 }
 
-.blue button:hover {
+.blue-button:hover {
     background-color: cyan;
     color: rgb(0, 9, 46);
     cursor: pointer;
 }
 
-.red button:hover {
+.red-button:hover {
     background-color: red;
     color: rgb(49, 0, 0);
     cursor: pointer;
 }
 
-.orange button:hover {
+.orange-button:hover {
     background-color: orange;
     color: rgb(46, 16, 0);
     cursor: pointer;
 }
 
-.pink button:hover {
+.pink-button:hover {
     background-color: magenta;
     color: rgb(46, 0, 20);
     cursor: pointer;
 }
 
-.header {
-    width: 50%;
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:76%;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header {
+    margin: 0 auto;
+    width: 100%;
 }
 
 .eye,
 .mouth {
     width: 90%;
-    filter: drop-shadow(0px 800px 0 lime);
-    transform: translateY(-800px);
+    filter: drop-shadow(8000px 0px 0 lime);
+    transform: translateX(-8000px);
 }
 
 .character-red {
     width: 90%;
-    filter: drop-shadow(0px 800px 0 red);
-    transform: translateY(-800px);
+    filter: drop-shadow(8000px 0px 0 red);
+    transform: translateX(-8000px);
 }
 
 .character-blue {
     width: 90%;
-    filter: drop-shadow(0px 800px 0 aqua);
-    transform: translateY(-800px);
+    filter: drop-shadow(8000px 0px 0 aqua);
+    transform: translateX(-8000px);
 }
 
 .character-pink {
     width: 90%;
-    filter: drop-shadow(0px 800px 0 magenta);
-    transform: translateY(-800px);
+    filter: drop-shadow(8000px 0px 0 magenta);
+    transform: translateX(-8000px);
 }
 
 .character-orange {
     width: 90%;
-    filter: drop-shadow(0px 800px 0 orange);
-    transform: translateY(-800px);
+    filter: drop-shadow(8000px 0px 0 orange);
+    transform: translateX(-8000px);
 }
 
 .input-container {
@@ -155,69 +208,44 @@ p {
     max-width: 100%;
     padding: 1.125em 1.5em;
     font-size: 1.25em;
-    border: 4px solid black;
-    transform: translateY(-800px);
+    border: 2px solid black;
+    transform: translateY(-8000px);
 }
 
 .green-text {
-    filter: drop-shadow(0px 800px 0 lime);
+    filter: drop-shadow(0px 8000px 0 lime);
 }
 
 .red-text {
-    filter: drop-shadow(0px 800px 0 red);
+    filter: drop-shadow(0px 8000px 0 red);
 }
 
 
 .pink-text {
-  filter: drop-shadow(0px 800px 0 magenta);
+  filter: drop-shadow(0px 8000px 0 magenta);
 }
 
 .blue-text {
-  filter: drop-shadow(0px 800px 0 aqua);
+  filter: drop-shadow(0px 8000px 0 aqua);
 }
 
 
 .orange-text {
-  filter: drop-shadow(0px 800px 0 orange);
+  filter: drop-shadow(0px 8000px 0 orange);
 }
 
-.login {
-  color: lime;
-  align-items: center;
-  text-align: center;
-  
+
+
+.review-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 }
 
-.login input {
-  background-color: rgb(0, 43, 0);
-  min-width: 500px;
-  min-height: 30px;
-  border: 2px solid lime;
-  margin: 10px;
-  color: lime;
-  font-size: 20px;
-  text-align: center;
+.critic-name {
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-.login label {
-  font-size: 20px;
-  font-family: "Noto Sans Cham";
-  font-weight: bold;
+.review-buttons {
+    text-align: right;
 }
-
-.login button {
-  background-color: rgb(0, 43, 0);
-  border: 2px solid lime;
-  color: lime;
-  width: 500px;
-  height: 50px;
-  margin-top: 10px;
-  transition: color 0.3s, background-color 0.3s
-}
-
-.login button:hover {
-  background-color: lime;
-  color: rgb(0, 43, 0);
-  transition: color 0.3s, background-color 0.3s
-}
-
