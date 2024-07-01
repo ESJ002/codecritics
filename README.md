@@ -1,8 +1,32 @@
-# React + Vite
+# CODECRITICS
+<img src="/src/assets/Logo/cc_logo_text.png">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Submit your code to the mercy of an AI Critic of your choice.
 
-Currently, two official plugins are available:
+## Screenshots
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="/src/assets/screenshots/ss1.png">
+<img src="/src/assets/screenshots/ss2.png">
+<img src="/src/assets/screenshots/ss3.png">
+
+## Technologies Used
+
+- JavaScript
+- HTML
+- CSS
+- React
+- React-Router
+- OpenAi API
+- Web Speech API
+- Bcrypt
+- Nodemon
+- Postgres
+
+## Future Features
+
+- Character Creation - users can create their own bots and select them as reviewers, choosing their eyes, mout, colour and personality.
+- Get bots from other users.
+- See other users reviews?
+- Delete Saved Reviews
+- Better text to speech.
+- Better animation.

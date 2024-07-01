@@ -13,7 +13,7 @@ export default function InputForm({
         <form onSubmit={handleSubmit} className="input">
             <TextArea handleChange={handleChange} formData={formData} character={character} colour={colour}/>
             <DropDownSelect changeVoice={changeVoice} character={character} colour={colour}/>
-            {formData !== '' ? <button className={colour}>SUBMIT</button> : <></>}
+            {formData !== '' ? <button className={`${colour} ${colour}-button`}>SUBMIT</button> : <></>}
         </form>
     );
 }

@@ -4,6 +4,7 @@ export default function TextArea({ handleChange, formData, character, colour}) {
             className={`content-textarea ${colour}`}
             onChange={handleChange}
             value={formData}
+            placeholder="INSERT YOUR CODE"
         ></textarea>
     );
 }

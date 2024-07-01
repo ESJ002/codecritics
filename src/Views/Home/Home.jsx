@@ -14,7 +14,14 @@ function Home({ user, colour, setColour }) {
         gladbot: "Aaron",
         sadbot: "Eddy (English (United Kingdom))",
         ladbot: "Daniel (English (United Kingdom))",
-        badbot: "Thomas",
+        badbot: "Aaron",
+        grandadbot: "Eddy (English (United Kingdom))",
+        cavemanbot: "Eddy (English (United Kingdom))",
+        haikubot: "Aaron",
+        briefbot: "Daniel (English (United Kingdom))",
+        fishbot: "Aaron",
+        panicbot: "Daniel (English (United Kingdom))",
+        nerdbot: "Daniel (English (United Kingdom))"
     };
 
     const colours = {
@@ -23,13 +30,27 @@ function Home({ user, colour, setColour }) {
         sadbot: "blue",
         ladbot: "orange",
         badbot: "pink",
+        grandadbot: "white",
+        cavemanbot: "yellow",
+        haikubot: "black",
+        briefbot: "white",
+        fishbot: "blue",
+        panicbot: "red",
+        nerdbot: "yellow"
     };
     const eyes = {
         gladbot: "normal",
         madbot: "angry",
         sadbot: "normal",
-        ladbot: "normal",
-        badbot: "normal",
+        ladbot: "hat",
+        badbot: "confused",
+        grandadbot: "glasses",
+        cavemanbot: "cave",
+        haikubot: "normal",
+        briefbot: "normal",
+        fishbot: "normal",
+        panicbot: "scared",
+        nerdbot: "glasses"
     };
 
     const mouth = {
@@ -38,6 +59,13 @@ function Home({ user, colour, setColour }) {
         sadbot: "sad",
         ladbot: "happy",
         badbot: "line",
+        grandadbot: "line",
+        cavemanbot: "o",
+        haikubot: "happy",
+        briefbot: "line",
+        fishbot: "o",
+        panicbot: "o",
+        nerdbot: "line"
     };
 
     const mouthSpeaking = {
@@ -46,6 +74,13 @@ function Home({ user, colour, setColour }) {
         sadbot: "sad",
         ladbot: "happy",
         badbot: "happy",
+        grandadbot: "sad",
+        cavemanbot: "happy",
+        haikubot: "happy",
+        briefbot: "happy",
+        fishbot: "happy",
+        panicbot: "sad",
+        nerdbot: "sad"
     };
 
     const [formData, setFormData] = useState("");
@@ -148,7 +183,7 @@ function Home({ user, colour, setColour }) {
             date: Date().toString().substring(4, 15),
         };
         let newReview = await ReviewApi.addOne(review);
-        console.log(newReview.review);
+        e.target.style.display = 'none'
     }
 
     function changeVoice(value) {

@@ -81,6 +81,13 @@ border: 2px solid;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
+.yellow {
+    background-color: rgb(68, 60, 0);
+    color: yellow;
+    border-color: yellow;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
 .red {
     background-color: rgb(49, 0, 0);
     color: red;
@@ -106,6 +113,20 @@ border: 2px solid;
     background-color: rgb(46, 16, 0);
     color: orange;
     border-color: orange;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.white {
+    background-color: black;
+    color: white;
+    border-color: white;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.black {
+    background-color: white;
+    color: black;
+    border-color: black;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
@@ -141,6 +162,12 @@ select {
     cursor: pointer;
 }
 
+.yellow-button:hover {
+    color: rgb(68, 60, 0);
+    background-color: yellow;
+    cursor: pointer;
+}
+
 .orange-button:hover {
     background-color: orange;
     color: rgb(46, 16, 0);
@@ -150,6 +177,18 @@ select {
 .pink-button:hover {
     background-color: magenta;
     color: rgb(46, 0, 20);
+    cursor: pointer;
+}
+
+.white-button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.black-button:hover {
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
 
@@ -197,6 +236,23 @@ select {
     transform: translateX(-8000px);
 }
 
+.character-yellow {
+    width: 90%;
+    filter: drop-shadow(8000px 0px 0 yellow);
+    transform: translateX(-8000px);
+}
+
+.character-white {
+    width: 90%;
+    filter: drop-shadow(8000px 0px 0 white);
+    transform: translateX(-8000px);
+}
+
+.character-black {
+    width: 90%;
+    filter: drop-shadow(8000px 0px 0 black);
+    transform: translateX(-8000px);
+}
 .input-container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -233,8 +289,18 @@ p {
 .orange-text {
   filter: drop-shadow(0px 8000px 0 orange);
 }
+.yellow-text {
+    filter: drop-shadow(0px 8000px 0 yellow);
+  }
+
+  .black-text {
+    filter: drop-shadow(0px 8000px 0 black);
+  }
 
 
+  .white-text {
+    filter: drop-shadow(0px 8000px 0 white);
+  }
 
 .review-grid-container {
     display: grid;
@@ -248,4 +314,18 @@ p {
 
 .review-buttons {
     text-align: right;
+}
+
+.header-logo {
+    max-width: 50%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.login-logo {
+    max-width: 30%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 10px;
 }

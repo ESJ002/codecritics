@@ -18,10 +18,10 @@ export default function Response({ handleSave, handlePlay, handlePause, handleSt
 }
                     {response !== "" ? (
                         <div className={colour}>
-                            <button className={colour} onClick={handleSave}>SAVE</button>
-                            {isPaused ? <button  className={colour} onClick={handlePlay}>PLAY</button> : <button className={colour} onClick={handlePause}>PAUSE</button>}
+                            <button className={`${colour} ${colour}-button`} onClick={handleSave}>SAVE</button>
+                            {isPaused ? <button  className={`${colour} ${colour}-button`} onClick={handlePlay}>PLAY</button> : <button className={colour} onClick={handlePause}>PAUSE</button>}
                             
-                            <button className={colour} onClick={handleStop}>STOP</button>
+                            <button className={`${colour} ${colour}-button`} onClick={handleStop}>STOP</button>
                         </div>
                     ) : (
                         <></>

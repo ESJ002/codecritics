@@ -26,15 +26,43 @@ export default function Reviews({ colour, user }) {
         gladbot: "Aaron",
         sadbot: "Eddy (English (United Kingdom))",
         ladbot: "Daniel (English (United Kingdom))",
-        badbot: "Thomas",
+        badbot: "Aaron",
+        grandadbot: "Eddy (English (United Kingdom))",
+        cavemanbot: "Eddy (English (United Kingdom))",
+        haikubot: "Aaron",
+        breifbot: "Daniel (English (United Kingdom))",
+        fishbot: "Aaron",
+        panicbot: "Daniel (English (United Kingdom))",
+        nerdbot: "Daniel (English (United Kingdom))"
     };
 
+    const colours = {
+        gladbot: "green",
+        madbot: "red",
+        sadbot: "blue",
+        ladbot: "orange",
+        badbot: "pink",
+        grandadbot: "white",
+        cavemanbot: "yellow",
+        haikubot: "black",
+        breifbot: "white",
+        fishbot: "blue",
+        panicbot: "red",
+        nerdbot: "yellow"
+    };
     const eyes = {
         gladbot: "normal",
         madbot: "angry",
         sadbot: "normal",
-        ladbot: "normal",
-        badbot: "normal",
+        ladbot: "hat",
+        badbot: "confused",
+        grandadbot: "glasses",
+        cavemanbot: "cave",
+        haikubot: "normal",
+        breifbot: "normal",
+        fishbot: "normal",
+        panicbot: "scared",
+        nerdbot: "glasses"
     };
 
     const mouth = {
@@ -43,6 +71,13 @@ export default function Reviews({ colour, user }) {
         sadbot: "sad",
         ladbot: "happy",
         badbot: "line",
+        grandadbot: "line",
+        cavemanbot: "o",
+        haikubot: "happy",
+        breifbot: "line",
+        fishbot: "o",
+        panicbot: "o",
+        nerdbot: "line"
     };
 
     const mouthSpeaking = {
@@ -51,6 +86,13 @@ export default function Reviews({ colour, user }) {
         sadbot: "sad",
         ladbot: "happy",
         badbot: "happy",
+        grandadbot: "sad",
+        cavemanbot: "happy",
+        haikubot: "happy",
+        breifbot: "happy",
+        fishbot: "happy",
+        panicbot: "sad",
+        nerdbot: "sad"
     };
 
     function handleChange(e) {
@@ -104,7 +146,6 @@ export default function Reviews({ colour, user }) {
 
     return (
         <section className={` page-container`}>
-            <h1 className={colour}>{user.email} REVIEWS</h1>
 
             {reviews.map((review) => (
                 <div key={review.id} className={`${review.colour} review`}>
